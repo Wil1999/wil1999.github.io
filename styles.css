@@ -1,0 +1,217 @@
+html {
+    overflow-x: hidden;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.indChar {
+    animation: rt 1s 1 linear;
+    opacity: 0;
+    animation-fill-mode: forwards;
+
+}
+
+.font400 {
+    font-weight: 400 !important;
+}
+
+.nav-link {
+    color: #888888;
+    letter-spacing: 2px;
+    font-size: 14px;
+}
+
+.nav-link:hover {
+    color: #548da8
+}
+
+.nav-link:hover::after,
+.nav-link:hover::before {
+    opacity: 1;
+}
+
+.nav-link:before {
+    content: "\263C";
+    margin-right: 4px;
+    color: #cecece;
+    opacity: 0;
+    transition: opacity 200ms linear;
+}
+
+.nav-link:after {
+    content: "\263C";
+    margin-left: 4px;
+    color: #cecece;
+    opacity: 0;
+    transition: opacity 200ms linear;
+}
+
+p {
+    color: #616161;
+    letter-spacing: 18px;
+}
+
+#mouse {
+    filter: invert(50%);
+    animation: flick 800ms infinite linear;
+}
+
+#heart{
+    filter: invert(50%);
+    animation: flick 1500ms infinite linear;
+}
+
+@keyframes flick {
+
+    0%,
+    100% {
+        opacity: 0.3
+    }
+
+    50% {
+        opacity: 1;
+    }
+}
+
+@keyframes rt {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        transform: rotateZ(180deg) translateX(-200px)
+    }
+
+    100% {
+        transform: rotateZ(360deg);
+        opacity: 1;
+        color: #548da8
+    }
+}
+
+#bottomNav {
+    transition: all 300ms linear;
+}
+
+@media screen and (max-width:752px) {
+    #bottomNav {
+        transform: translateY(100%);
+        opacity: 0
+    }
+}
+
+.bg-anime{
+    animation: anime-image 5s;
+    animation-fill-mode: forwards;
+}
+
+.bg-image{
+    position: absolute;
+    min-width: 100%;
+    min-height: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    z-index: -1;
+    }
+    
+    .container {
+        box-sizing: border-box;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .box {
+        border-radius: 20px;
+        width: 60px;
+        height: 60px;
+        background: #f0f0f0;
+        box-shadow:  0 0 0 #cccccc,
+                     0 0 0 #ffffff,
+                      10px 10px 10px #cccccc inset,
+                      -10px -10px 10px #ffffff inset;
+        animation: anime 5s cubic-bezier(0.16, 1, 0.3, 1);
+        animation-fill-mode: forwards;
+      }
+
+      .m1{
+        animation: anime-messages 7s;
+        animation-fill-mode: forwards;
+      }
+     
+      @keyframes anime {
+        0% {
+          width: 60px;
+          height: 60px;
+          background: #f0f0f0;
+          box-shadow:  0 0 0 #cccccc,
+                       0 0 0 #ffffff,
+                        10px 10px 10px #cccccc inset,
+                        -10px -10px 10px #ffffff inset;
+        }
+        25% {
+          width: 60px;
+          height: 60px;
+          background: #f8f8f8;
+          box-shadow:  10px 10px 10px #cccccc,
+                       10px 10px 10px #ffffff,
+                       0 0 0 #cccccc inset,
+                       0 0 0 #ffffff inset;
+        }
+        50% {
+          width: 60px;
+          height: 240px;
+          background: #f8f8f8;
+          box-shadow:  10px 10px 10px #cccccc,
+                       10px 10px 10px #ffffff,
+                       0 0 0 #cccccc inset,
+                       0 0 0 #ffffff inset;
+        }
+        100% {
+          width: 500px;
+          height: 380px;
+          background: #fafafa;
+          box-shadow:  40px 40px 40px #cccccc,
+                       0 0 0 #ffffff,
+                       0 0 0 #cccccc inset,
+                       2px 2px 2px #ffffff inset;
+        }
+
+        
+    }
+
+    @keyframes anime-image {
+        0% {
+          opacity: 0.75;
+        }
+        25% {
+            opacity: 0.5;
+        }
+        50% {
+            opacity: 0.2;
+        }
+        100% {
+            opacity: 0.2;
+        }
+    }
+
+    @keyframes anime-messages {
+        0% {
+          opacity: 0;
+          transform: translate3d(0,50px,0);
+        }
+        25% {
+            opacity: 0.5;
+            transform: translate3d(0,40px,0);
+        }
+        50% {
+            opacity: 0.75;
+            transform: translate3d(0,20px,0);
+        }
+        100% {
+            opacity: 1;
+            transform: translate3d(0,0,0);
+        }
+    }
