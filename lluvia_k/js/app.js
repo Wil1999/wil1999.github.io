@@ -1,5 +1,5 @@
 // Definimos un limite de hasta 100 emojis en pantalla
-const COUNT = 100;
+const COUNT = 200;
 
 // Definimos tamaños de emojis que se seleccionaran aleatorios en un arreglo
 const SIZES = [
@@ -18,21 +18,13 @@ const SIZES = [
 
 // Creamos un lista de los emojis que podrian salir en pantallla en un arreglo
 const EMOJI = [
-    '😀',
-    '😁',
-    '😘',
-    '🙈',
-    '🌻',
-    '😄',
-    '🌷',
-    '😆',
-    '😉',
-    '😊',
     '💕',
-    '😍',
-    '😘',
-    '🥰',
-    '😗'
+    '💖',
+    '❤️',
+    '🩷',
+    '🩵',
+    '💞',
+    '❤️‍🔥'
 ];
 
 // Seleccionamos nuestro contenedor

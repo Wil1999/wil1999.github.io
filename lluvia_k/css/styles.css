@@ -84,3 +84,20 @@ body {
 	z-index: 100;
 }
 
+#heart{
+	animation-name: heart;
+	animation-duration: 3s;
+	animation-iteration-count: infinite
+}
+
+@keyframes heart {
+0%{
+	font-size: 15px;
+}
+50%{
+	font-size: 20px;
+}
+100%{
+	font-size: 15px;
+}
+}
