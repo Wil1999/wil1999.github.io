@@ -36,7 +36,6 @@
    background:linear-gradient(90deg, #fff, #fff 40%, #ddd);
 }
 .side.two {
-  width:320px;
    transform:skew(10deg,-15deg);
    background:linear-gradient(-90deg, #fff, #fff 40%, #f0f0f0);
 }
