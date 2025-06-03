@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carta de San Valentín</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body onclick="play()">
+    <audio id="player" autoplay loop>
+        <source src="./music.mp3" type="audio/mp3">
+    </audio>
+
+    <div class="rain-container" style="z-index: 10;">        
+        <div class="rainDrop rainDrop--s" style="--x-start:40vw; --x-end: 50vw;">❤️</div>
+        <div class="rainDrop rainDrop--m" style="--x-start:60vw; --x-end: 50vw;">❤️</div>
+        <div class="rainDrop rainDrop--l" style="--x-start:50vw; --x-end: 50vw;">💕</div>
+        <div class="rainDrop rainDrop--xl" style="--x-start:50vw; --x-end: 50vw;">💖</div>
+
+    </div>   
+
+<div class="valentines-day" style="z-index: 100;">
+  <div class="envelope"></div>
+  <div class="heart"></div>
+  <div class="text" style="width: 90%; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;"><span>MI AMORCITO</span><br> <span style="font-size: small; font-weight: 600; font-weight: lighter;">Haz click aquí</span></div>
+  <div class="front"></div>
+</div>
+
+<div id="card" style="z-index: 100;">
+    <div style="position: absolute; left: 0px; bottom:0px; background-color: darkcyan; padding: 8px; border-radius: 100%; font-weight: bolder; color: white; cursor: pointer;" id="flecha-siguiente">→</div>
+  <div class="side one">
+    <h2>Para mi futura Esposa ♥️</h2>
+    <p>No eres solo una chica hermosa, eres la chica más hermosa del mundo, perdóname si no te lo digo a
+    diario, quizás sea culpa mia el no hacertelo saber siempre, pero no dudes que te amo, y te amaré siempre,
+    por que para mi, eres la chica mas maravillosa del mundo, la más inteligente la mas preciosa y la mas bella, tú eres aquella linda</p>
+  </div>
+  <div class="side two">
+    <p>niña especial que tiene mi corazón en sus manos y aunque sea solo una frase
+    el significado está en donde encuentras tu corazón latir, y el mio está junto a ti...
+    no olvides que siempre estoy pensando en ti, aún cuando esté pensando en muchas cosas
+    aún cuando el dia acaba, aún antes de dormir.. pienso en ti...
+    Estoy completamente enamorado de ti Michelle Ortega de Cáceres, mi novia, mi futura esposa, la futura madre de mis hijos... mi amor...</p>
+    <p><span style="font-weight: bold; font-size: larger;">W & M 🌻❤️</span></p>
+    <div style="position: absolute; left: 0px; bottom:0px; background-color: darkcyan; padding: 8px; border-radius: 100%; font-weight: bolder; color: white;cursor: pointer;" id="flecha-atras">←</div>
+  </div>
+</div>
+
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+<script src="./script.js"></script>
+
+</body>
+</html>
