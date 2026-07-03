@@ -1,3 +1,31 @@
+.background-blur {
+    position: fixed;
+    inset: 0;
+    /* Reemplaza 'tu-imagen.jpg' por la ruta de la foto que quieras usar */
+    background-image: url('../img/fotito.jpg'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    /* Aquí controlas qué tan borrosa quieres la imagen (ej: 8px, 12px, etc.) */
+    filter: blur(10px); 
+    
+    /* El truco mágico: escalamos un poquito el fondo (1.05) para que el blur 
+       no cree bordes blancos o transparentes en las esquinas de la pantalla */
+    transform: scale(1.05); 
+    
+    z-index: -1; /* Lo enviamos al fondo absoluto por detrás de la lluvia y textos */
+    pointer-events: none; /* Asegura que no interfiera con los clics */
+}
+
+/* Opcional: Si quieres que el fondo sea un poco más oscuro o suave para que el texto resalte */
+.background-blur::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: rgba(255, 255, 255, 0.2); /* Una capa blanca sutil. Usa rgba(0,0,0,0.2) si prefieres oscurecerlo */
+}
+
 body {
 	padding: 0;
 	margin: 0;
@@ -9,11 +37,13 @@ body {
 
 
 .rain-container {
-	position: absolute;
-    /* esto definira las compensaciones de inicio y final */
-	inset: 0;
-    /* esto nos permitira cortar los elementos que se salen del contenedor */
-	overflow: hidden;
+    width: 100%;
+    height: 100vh; /* Ocupa el 100% de la ventana visible */
+    position: fixed; /* Se queda fijo en la pantalla mientras bajas */
+    inset: 0;
+    overflow: hidden;
+    z-index: 1; /* Lo ponemos detrás del texto si es necesario */
+    pointer-events: none; /* Evita que los emojis bloqueen los clics de la página */
 }
 
 /* Los keyframes nos sirve para dar un nombre y definir los fotogramas clave  */
@@ -37,51 +67,34 @@ body {
 }
 
 .rainDrop--s {
-	--sz: 1rem;
-	--blur: 2px;
-	--a: 0.8;
-	--x-start: 50vw;
-	--x-end: 0;
-	--y-start: 0;
-	--y-end: 100vh;
-	position: absolute;    
+    --sz: 1rem;
+    --blur: 2px;
+    --a: 0.8;
+    position: absolute;    
 }
 
 .rainDrop--m {
-	--sz: 2rem;
-	--blur: 2px;
-	--a: 0.8;
-	--x-start: 50vw;
-	--x-end: 0;
-	--y-start: 0;
-	--y-end: 100vh;
-	position: absolute;
-	filter: blur(0px);
-	z-index: 50;
+    --sz: 2rem;
+    --blur: 0px;
+    --a: 0.8;
+    position: absolute;
+    z-index: 50;
 }
 
 .rainDrop--l {
-	--sz: 3rem;
-	--blur: 0px;
-	--a: 0.8;
-	--x-start: 50vw;
-	--x-end: 0;
-	--y-start: 0;
-	--y-end: 100vh;
-	position: absolute;
-	z-index: 80;
+    --sz: 3rem;
+    --blur: 0px;
+    --a: 0.8;
+    position: absolute;
+    z-index: 80;
 }
 
 .rainDrop--xl {
-	--sz: 6rem;
-	--blur: 4px;
-	--a: 0.5;
-	--x-start: 50vw;
-	--x-end: 0;
-	--y-start: 0;
-	--y-end: 100vh;
-	position: absolute; 
-	z-index: 100;
+    --sz: 6rem;
+    --blur: 4px;
+    --a: 0.5;
+    position: absolute; 
+    z-index: 100;
 }
 
 #heart{
